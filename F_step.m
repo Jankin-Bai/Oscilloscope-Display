@@ -1,23 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%% Í¼Æ¬¶şÖµ»¯´¦Àí²¢Êä³öÎªX-YÉùÒô %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% v1.0 %%%%%%%%%%%%%%%%%%%
+% å›¾ç‰‡äºŒå€¼åŒ–å¤„ç†å¹¶è¾“å‡ºä¸ºX-Yå£°éŸ³  v1.0  
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 clear;clc;
-I=imread('C:\Users\janki\Desktop\20171225221419.jpg');%¶ÁÈ¡Í¼Æ¬
-I=rgb2gray(I);      %È¥³ıRGB£¬»Ò¶È»¯Í¼Æ¬
+I=imread('C:\Users\janki\Desktop\20171225221419.jpg');%è¯»å–å›¾ç‰‡
+I=rgb2gray(I);      %å»é™¤RGBï¼Œç°åº¦åŒ–å›¾ç‰‡
 imshow(I,[]);
 title('Original Image');
 cannyBW=edge(I,'canny');
 figure;
-imshow(cannyBW);    %²ÉÓÃCannysËã×Ó±ßÔµÌáÈ¡
+imshow(cannyBW);    %é‡‡ç”¨Cannysç®—å­è¾¹ç¼˜æå–
 title('Canny Edge');
-XY=sparse(cannyBW); %»¯ÎªÏ¡Êè¾ØÕó
-[y,x]=find(XY); %ÌáÈ¡×ø±ê
-plot(x,y,'.');  %´òÓ¡
+XY=sparse(cannyBW); %åŒ–ä¸ºç¨€ç–çŸ©é˜µ
+[y,x]=find(XY); %æå–åæ ‡
+plot(x,y,'.');  %æ‰“å°
 X3=[x:y];
 FS=44100;
 
 sound(X3,FS);
 
-audiowrite('12.WAV',X3,FS);%Éú³ÉÉù²¨
+audiowrite('12.WAV',X3,FS);%ç”Ÿæˆå£°æ³¢
 
