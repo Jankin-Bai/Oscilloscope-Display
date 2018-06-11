@@ -11,4 +11,5 @@
 ### 3.在示波器中显示<br>
 * 能在示波器上画**李萨茹图形**的驱动：用xy输入做**行场扫描**，先画任意位置一个点然后过渡到一个线然后是矩形然后是分体形状然后是简单几秒动画。
 
-[视频取模](https://blog.csdn.net/liyuqian199695/article/details/50411466
+[视频取模](https://blog.csdn.net/liyuqian199695/article/details/50411466)
+
